@@ -1,12 +1,20 @@
 <div class='app-component'>
   <p>app-component</p>
+  {{ weather | json }}
   <h1>Dojo Weather Forecast</h1>
-  <a [routerLink]="['/seattle']">Seattle WA</a>
-  <a [routerLink]="['/sanjose']">San Jose CA</a>
-  <a [routerLink]="['/burbank']">Burbank CA</a>
-  <a [routerLink]="['/dallas']">Dallas TX</a>
-  <a [routerLink]="['/dc']">Washington D.C.</a>
-  <a [routerLink]="['/chicago']">Chicago</a>
+  <a (click)="getWeather('seattle')"
+    [routerLink]="['/seattle']">Seattle WA</a>
+  <a (click)="getWeather('san jose')"
+    [routerLink]="['/sanjose']">San Jose CA</a>
+  <a (click)="getWeather('burbank')"
+    [routerLink]="['/burbank']">Burbank CA</a>
+  <a (click)="getWeather('dallas')"
+    [routerLink]="['/dallas']">Dallas TX</a>
+  <a (click)="getWeather('washington')"
+    [routerLink]="['/dc']">Washington D.C.</a>
+  <a (click)="getWeather('chicago')"
+    [routerLink]="['/chicago']">Chicago</a>
   <br>
   <router-outlet></router-outlet>
+  {{ weather[0] }}
 </div>

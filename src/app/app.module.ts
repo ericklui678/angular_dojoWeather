@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpService } from './http.service';
+import { HttpModule } from '@angular/http';
+
 import { AppComponent } from './app.component';
 import { SanjoseComponent } from './sanjose/sanjose.component';
 import { SeattleComponent } from './seattle/seattle.component';
@@ -21,9 +24,10 @@ import { ChicagoComponent } from './chicago/chicago.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
