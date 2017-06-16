@@ -1,0 +1,10 @@
+.app-component{
+    border: 3px solid black;
+    font-family: sans-serif, serif;
+}
+.app-sanjose{
+    border: 3px solid blue;
+}
+h1{
+    text-align: center;
+}
