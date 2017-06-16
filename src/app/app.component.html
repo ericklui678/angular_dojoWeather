@@ -1,6 +1,5 @@
 <div class='app-component'>
   <p>app-component</p>
-  {{ weather | json }}
   <h1>Dojo Weather Forecast</h1>
   <a (click)="getWeather('seattle')"
     [routerLink]="['/seattle']">Seattle WA</a>
@@ -16,5 +15,9 @@
     [routerLink]="['/chicago']">Chicago</a>
   <br>
   <router-outlet></router-outlet>
-  {{ weather[0] }}
+  Humidity: {{ humidity }} <br>
+  Temperature (Average): {{ temp_avg }} <br>
+  Temperature (High): {{ temp_high }} <br>
+  Temperature (Low): {{ temp_low }} <br>
+  Status: {{ status }} <br>
 </div>
